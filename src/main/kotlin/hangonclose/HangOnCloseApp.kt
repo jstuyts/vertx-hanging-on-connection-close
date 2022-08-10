@@ -76,10 +76,12 @@ private class WaitingVerticle(private val mzPool: PgPool) : CoroutineVerticle() 
                     println(t)
                     throw t
                 } finally {
+                    println("Rolling back")
                     // Without idle timeout, the verticle hangs here.
                     transaction.rollback().await()
                 }
             } finally {
+                println("Closing connection")
                 connection.close().await()
             }
         }
