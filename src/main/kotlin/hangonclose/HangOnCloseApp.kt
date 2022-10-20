@@ -32,11 +32,11 @@ fun main() {
             connectOptions.password = ""
             connectOptions.cachePreparedStatements = true
 
-            // If no idle timeout is set, rolling back the transaction after
-            // the query execution has been stopped by Vert.x, will hang
+            // If no write idle timeout is set, rolling back the transaction
+            // after the query execution has been stopped by Vert.x, will hang
             // (indefinitely). Enabling the idle timeout will cause the
             // rollback to fail immediately.
-//            connectOptions.idleTimeout = Integer.MAX_VALUE
+//            connectOptions.writeIdleTimeout = Integer.MAX_VALUE
 
             val poolOptions = PoolOptions()
             poolOptions.maxSize = 10
