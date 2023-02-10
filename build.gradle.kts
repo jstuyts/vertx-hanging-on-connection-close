@@ -13,11 +13,11 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
-    implementation("io.vertx:vertx-core:4.3.4")
-    implementation("io.vertx:vertx-lang-kotlin-coroutines:4.3.4")
-    implementation("io.vertx:vertx-pg-client:4.3.4")
-    implementation("org.postgresql:postgresql:42.4.1")
-    implementation("org.testcontainers:testcontainers:1.17.3")
+    implementation("io.vertx:vertx-core:4.3.8")
+    implementation("io.vertx:vertx-lang-kotlin-coroutines:4.3.8")
+    implementation("io.vertx:vertx-pg-client:4.3.8")
+    implementation("org.postgresql:postgresql:42.5.2")
+    implementation("org.testcontainers:testcontainers:1.17.6")
 }
 
 tasks.withType<KotlinCompile> {
